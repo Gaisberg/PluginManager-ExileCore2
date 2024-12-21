@@ -45,11 +45,6 @@ namespace PluginManager
             foreach (var folderPath in Directory.GetDirectories(sourcePath))
             {
                 string folderName = Path.GetFileName(folderPath);
-                if (folderName == "PluginManager")
-                {
-                    continue;
-                }
-
                 var plugin = PluginManager.Plugins.FirstOrDefault(x => x.Plugin.DirectoryName == folderName);
                 var pluginData = new PluginData
                 {
