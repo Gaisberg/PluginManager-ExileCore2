@@ -1,0 +1,23 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net8.0-windows</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <Platforms>x64</Platforms>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="ImGui.NET" Version="1.90.0.1" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="ExileCore2">
+      <HintPath>..\..\..\..\ExileCore2.dll</HintPath>
+    </Reference>
+    <Reference Include="LibGit2Sharp">
+      <HintPath>deps\LibGit2Sharp.dll</HintPath>
+    </Reference>
+	<Content Include="deps\git2-3f4182d.dll">
+      <TargetPath>git2-3f4182d.dll</TargetPath>
+	  <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+	</Content>
+  </ItemGroup>
+</Project>
