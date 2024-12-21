@@ -298,6 +298,9 @@ namespace PluginManager
             if (repoName.EndsWith(".git"))
                 repoName = repoName.Substring(0, repoName.Length - 4);
 
+            if (string.IsNullOrEmpty(repoName))
+                throw new ArgumentException("Invalid repository url");
+
             string targetPath = Path.Combine(PluginManager.RootDirectory, "Plugins", "Source", repoName);
 
             if (Directory.Exists(targetPath))
